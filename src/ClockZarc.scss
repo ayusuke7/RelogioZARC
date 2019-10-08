@@ -1,0 +1,93 @@
+.container-month {
+  position: absolute;
+  width: 100%;
+}
+
+.border {
+  display: flex;
+  position: absolute;
+  width: 492px;
+  height: 482px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 40px solid white;
+  margin: -15px -15px 0;
+  align-items: center;
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+
+.ball {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+@mixin on-circle($item-count, $circle-size, $width, $height, $rot) {
+  width: $width;
+  height: $height;
+
+  > * {
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    $angle: (360 / $item-count);
+    $rot: $rot;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg)
+          translate($circle-size / 2)
+          rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+.circle-months {
+  @include on-circle(
+    $item-count: 12,
+    $circle-size: 32em,
+    $width: 430px,
+    $height: 435px,
+    $rot: -90
+  );
+  position: absolute;
+}
+
+.circle-days {
+  @include on-circle(
+    $item-count: 48,
+    $circle-size: 32em,
+    $width: 450px,
+    $height: 445px,
+    $rot: 0
+  );
+  position: absolute;
+}
