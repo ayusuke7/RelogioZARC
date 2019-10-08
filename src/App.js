@@ -2,34 +2,73 @@ import React, { Component } from "react";
 import "./App.scss";
 
 class App extends Component {
-  gridGenerator = cols => {
-    return (
-      <div className="grid">
-        {[...Array(18)].map((it, id) => (
-          <div key={id} className="line">
-            {[...Array(18)].map((it, id) => (
-              <div key={id} className="cell"></div>
-            ))}
-          </div>
-        ))}
-      </div>
-    );
-  };
-
-  spinnerGenerator = () => {
-    return (
-      <div className="spinner">
-        <div className="ball"></div>
-      </div>
-    )
-  }
-
   render() {
     return (
       <div className="container">
-        <div className="clock">
-          {/* this.gridGenerator() */}
-          {/* this.spinnerGenerator() */}
+        <div className="border"></div>
+        <div className="circle-months">
+          <div>JAN</div>
+          <div>FEV</div>
+          <div>MAR</div>
+          <div>ABR</div>
+          <div>MAI</div>
+          <div>JUN</div>
+          <div>JUL</div>
+          <div>AGO</div>
+          <div>SET</div>
+          <div>OUT</div>
+          <div>NOV</div>
+          <div>DEZ</div>
+        </div>
+        <div className="circle-days">
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball blue"></div>
+          <div className="ball blue"></div>
+          <div className="ball blue"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
+          <div className="ball"></div>
         </div>
       </div>
     );

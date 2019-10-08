@@ -1,8 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import App from "./App";
-//import Clock from "./Clock";
-//import PureClock from "./PureClock";
-import Circle from "./Circle"
+import App from "./App";
 
-ReactDOM.render(<Circle />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
