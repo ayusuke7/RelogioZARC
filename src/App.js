@@ -38,6 +38,7 @@ class App extends Component {
           zarc={zarc}
           title={`HOJE: ${hoje}`}
           subtitle={"faltam 0 dia paras o início do ZARC *"}
+          today={37}
         />
       </div>
     );

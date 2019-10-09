@@ -15,7 +15,12 @@ class ClockZarc extends Component {
   };
 
   render() {
-    const { title, subtitle, zarc = [] } = this.props;
+    const { 
+      zarc = [], 
+      title, 
+      subtitle, 
+      today 
+    } = this.props;
     console.log(zarc);
     return (
       <div>
@@ -48,7 +53,12 @@ class ClockZarc extends Component {
           ))}
         </div>
         <div className="circle-today">
-          {[...Array(48)].map((it, id) => (<div key={id} className="ball-today green"></div>))}
+          {[...Array(48)].map((it, id) => (
+            <div 
+              key={id} 
+              className={"ball-today "+(id === today ? "green" : "")}>
+            </div>
+          ))}
         </div>          
       </div>
     );
