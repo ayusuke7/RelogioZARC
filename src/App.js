@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import ClockZarc from "./ClockZarc";
 import moment from "moment";
+import Bussola from "./Bussola";
+//import ClockZarc from "./ClockZarc";
 
 import "./App.scss";
 
 class App extends Component {
   state = {
-    hoje: "2019-04-19",
+    hoje: "2019-10-09",
     zarc: [
       0,
       0,
@@ -73,12 +74,13 @@ class App extends Component {
 
     return (
       <div className="container">
-        <ClockZarc
+        <Bussola />
+        {/* <ClockZarc
           zarc={zarc}
           title={`HOJE: ${hoje}`}
           subtitle={"faltam 0 dia paras o início do ZARC *"}
           today={this.calculate(hoje)}
-        />
+        /> */}
       </div>
     );
   }

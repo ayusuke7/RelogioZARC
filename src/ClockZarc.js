@@ -16,7 +16,6 @@ class ClockZarc extends Component {
 
   render() {
     const { zarc = [], title, subtitle, today } = this.props;
-    console.log(zarc);
     return (
       <div>
         <div className="border">
@@ -40,12 +39,12 @@ class ClockZarc extends Component {
           <div>DEZ</div>
         </div>
         <div className="circle-days">
-          {zarc.map((item, index) => (
+          {zarc.map((it, id) => (
             <>
-              {index % 3 === 0 ? <div key={`${index}a`}></div> : null}
+              {id % 3 === 0 ? <div key={`${id}a`}></div> : null}
               <div
-                key={`${index}b`}
-                className={"ball " + this.colorChange(item)}
+                key={`${id}b`}
+                className={"ball " + this.colorChange(it)}
               ></div>
             </>
           ))}
@@ -53,10 +52,10 @@ class ClockZarc extends Component {
         <div className="circle-today">
           {[...Array(36)].map((it, id) => (
             <>
-              {id % 3 === 0 ? <div></div> : null}
+              {id % 3 === 0 ? <div key={`${id}c`}></div> : null}
               <div
-                key={id}
-                className={"ball-today " + (id + 1 === today ? "green" : "")}
+                key={`${id}d`}
+                className={`ball-today ${id + 1 === today ? "green" : ""}`}
               ></div>
             </>
           ))}
