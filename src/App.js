@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import Bussola from "./Bussola";
-//import ClockZarc from "./ClockZarc";
+import ClockZarc from "./ClockZarc";
 
 import "./App.scss";
 
@@ -74,13 +73,12 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Bussola />
-        {/* <ClockZarc
+        <ClockZarc
           zarc={zarc}
           title={`HOJE: ${hoje}`}
           subtitle={"faltam 0 dia paras o início do ZARC *"}
           today={this.calculate(hoje)}
-        /> */}
+        />
       </div>
     );
   }
